@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VEND THIS || Redefining how a city shops</title>
+<meta name="description" content="Vend This brings Japan's beloved vending machine culture to the United States: small, beautiful, high-tech stores run entirely by smart vending machines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav on-dark" id="nav">
+  <a class="brand" href="index.html">VEND THIS</a>
+  <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('menu-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="https://sharemyhtml.com/p/Dy9-vi55bc" target="_blank" rel="noopener">Partners</a></li>
+    <li><a href="invest.html">Invest</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <video class="hero-video" id="heroVideo" autoplay muted loop playsinline aria-label="A sage-green Vend This vending machine floating among clouds">
+    <source src="hero-sky.mp4" type="video/mp4">
+  </video>
+  <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound">SOUND OFF</button>
+</section>
+
+<script>
+const v = document.getElementById('heroVideo');
+const btn = document.getElementById('soundToggle');
+btn.addEventListener('click', () => {
+  v.muted = !v.muted;
+  btn.textContent = v.muted ? 'SOUND OFF' : 'SOUND ON';
+  if (!v.muted) v.play();
+});
+</script>
+
+</body>
+</html>

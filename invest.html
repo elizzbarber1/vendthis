@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invest - Vend This</title>
+<meta name="description" content="Investor portal for Vend This.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav" id="nav">
+  <a class="brand" href="index.html">VEND THIS</a>
+  <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('menu-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="https://sharemyhtml.com/p/Dy9-vi55bc" target="_blank" rel="noopener">Partners</a></li>
+    <li><a href="invest.html">Invest</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page" style="text-align:center;">
+  <div class="eyebrow">Invest</div>
+  <h1 class="page-title">Investor Portal</h1>
+
+  <form class="gate" id="gate" onsubmit="return checkPw(event)">
+    <input type="password" id="pw" placeholder="Password" autocomplete="off" aria-label="Password">
+    <br>
+    <button class="btn" type="submit">Enter</button>
+    <div class="gate-error" id="gateError"></div>
+  </form>
+
+  <div class="invest-links" id="investLinks">
+    <a class="btn" href="/Vend-This-Investor-Overview.pdf" target="_blank" rel="noopener">Investor Overview</a>
+    <a class="btn" href="https://sharemyhtml.com/p/irkouIuAaa" target="_blank" rel="noopener">Product Catalog</a>
+    <a class="btn" href="https://sharemyhtml.com/p/fkF8Q3Q3nA" target="_blank" rel="noopener">Financial Scenarios</a>
+  </div>
+</div>
+
+<script>
+// NOTE: replace with the real investor password before launch.
+const INVESTOR_PASSWORD = "dispensingnow";
+function checkPw(e) {
+  e.preventDefault();
+  const v = document.getElementById('pw').value;
+  if (v === INVESTOR_PASSWORD) {
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('investLinks').classList.add('open');
+  } else {
+    document.getElementById('gateError').textContent = 'Incorrect password. Try again.';
+  }
+  return false;
+}
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 40), {passive:true});
+</script>
+</body>
+</html>

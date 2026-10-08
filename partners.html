@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partners - Vend This</title>
+<meta name="description" content="Host a custom Vend This machine in your business, curated around your space and clientele.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav" id="nav">
+  <a class="brand" href="index.html">VEND THIS</a>
+  <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('menu-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="https://sharemyhtml.com/p/Dy9-vi55bc" target="_blank" rel="noopener">Partners</a></li>
+    <li><a href="invest.html">Invest</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="eyebrow">Partners</div>
+  <p class="lede">Put a custom Vend This machine in your business. We install it, stock it, restock it, and service it.</p>
+  <div class="section-gap"></div>
+  <a class="btn" href="https://sharemyhtml.com/p/Dy9-vi55bc" target="_blank" rel="noopener">INQUIRE</a>
+</div>
+
+<script>
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 40), {passive:true});
+</script>
+</body>
+</html>

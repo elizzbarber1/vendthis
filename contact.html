@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Vend This</title>
+<meta name="description" content="Submit an inquiry: request a customized Vend This concept for your space.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav" id="nav">
+  <a class="brand" href="index.html">VEND THIS</a>
+  <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('menu-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="https://sharemyhtml.com/p/Dy9-vi55bc" target="_blank" rel="noopener">Partners</a></li>
+    <li><a href="invest.html">Invest</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="eyebrow">Contact</div>
+  <h1 class="page-title">Submit an Inquiry</h1>
+  <p class="lede">Complete the form to request a customized concept designed for your space or to clarify any questions.</p>
+
+  <form class="form" action="https://formsubmit.co/eb.elizabeth.eb@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New Vend This inquiry">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" style="display:none">
+    <div class="form-row">
+      <div class="field">
+        <label for="fname">First Name <span class="req">*</span></label>
+        <input id="fname" name="First Name" type="text" required>
+      </div>
+      <div class="field">
+        <label for="lname">Last Name <span class="req">*</span></label>
+        <input id="lname" name="Last Name" type="text" required>
+      </div>
+    </div>
+    <div class="field">
+      <label for="email">Email <span class="req">*</span></label>
+      <input id="email" name="Email" type="email" required>
+    </div>
+    <div class="form-row">
+      <div class="field">
+        <label for="phone">Phone</label>
+        <input id="phone" name="Phone" type="tel">
+      </div>
+      <div class="field">
+        <label for="company">Company</label>
+        <input id="company" name="Company" type="text">
+      </div>
+    </div>
+    <div class="field">
+      <label for="message">Message <span class="req">*</span></label>
+      <textarea id="message" name="Message" required></textarea>
+    </div>
+    <button class="btn" type="submit">Send</button>
+    <p class="form-note">We reply to every inquiry personally.</p>
+  </form>
+</div>
+
+<script>
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 40), {passive:true});
+</script>
+</body>
+</html>

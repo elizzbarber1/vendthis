@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - Vend This</title>
+<meta name="description" content="Vend This brings Japan's beloved vending machine culture to the United States. Meet the founder, Elizabeth Barber.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav" id="nav">
+  <a class="brand" href="index.html">VEND THIS</a>
+  <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('menu-open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="https://sharemyhtml.com/p/Dy9-vi55bc" target="_blank" rel="noopener">Partners</a></li>
+    <li><a href="invest.html">Invest</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="about-top">
+  <div class="page">
+    <div class="eyebrow">About</div>
+    <p class="lede">Vend This brings Japan&rsquo;s beloved vending machine culture to the United States: small, beautiful, high-tech stores run entirely by smart vending machines, open 24/7. The art-forward spaces feature dedicated installations of a surreal, futurist nature, creating a thought-provoking experience for the consumer. The first opens in Tampa, stocked with rare finds you won&rsquo;t see in a mainstream shop. Businesses can also host a custom Vend This machine, curated around their space and clientele.</p>
+  </div>
+</section>
+
+<section class="founder">
+  <div class="founder-inner">
+    <h1 class="page-title">Meet the Founder</h1>
+    <div class="eyebrow">Elizabeth Barber</div>
+    <img class="founder-photo" src="founder.jpg" alt="Elizabeth Barber, founder of Vend This">
+    <p><strong>Florida born, globally shaped.</strong> A longtime Tampa resident with deep roots in this market and a genuine investment in seeing it thrive.</p>
+    <p><strong>Multi-disciplinary background.</strong> Freelance photography, art direction, writing, international antique sales, and luxury hospitality as a concierge&hellip; a rare combination of visual taste, storytelling, and high-touch service sensibility.</p>
+    <p><strong>Curation is in the DNA.</strong> Family operated a department store in the early to mid 20th century. Grandfather sourced and sold produce internationally. Grandmother decorated Southern interiors with magazine-like precision. Mother built an advertising career from before she was old enough to vote. An eye for product selection and brand positioning is not learned; it is inherited.</p>
+    <p><strong>Inspired by Japan&rsquo;s vending culture.</strong> Extensive world travel, particularly studying Japan&rsquo;s billion-dollar high-end vending ecosystem, crystallized the vision.</p>
+  </div>
+</section>
+
+<script>
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 40), {passive:true});
+</script>
+</body>
+</html>
